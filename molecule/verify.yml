@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  name: 'Verify'
+  become: True
+  gather_facts: True
+
+  tasks:
+    - name: 'Get the content of the source file'
+      slurp:
+        path: '/etc/motd'
+      register: __verify_slurp
+
+    - name: 'Check the content of the source file'
+      assert:
+        that:
+          - __verify_slurp.content | b64decode | regex_search('ohai')

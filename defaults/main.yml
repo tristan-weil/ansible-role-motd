@@ -1,0 +1,4 @@
+---
+
+motd_message: ""
+motd_issue: "{{ motd_message }}"

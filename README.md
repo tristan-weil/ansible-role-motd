@@ -1,39 +1,43 @@
 # Ansible Role: motd
 
-An Ansible role to rewrite the `/etc/motd` and `/etc/issue` files.
+An Ansible Role to rewrite the `/etc/motd` and `/etc/issue` files.
+
+[![Actions Status](https://github.com/tristan-weil/ansible-role-motd/workflows/molecule/badge.svg?branch=master)](https://github.com/tristan-weil/ansible-role-motd/actions)
 
 ## Role Variables
 
-None.
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+Mandatory variables:
+
+| Variable      | Description |
+| :------------ | :---------- |
+
+Optional variables:
+
+| Variable      | Default | Description |
+| :------------ | :------ | :---------- |
+| motd_message  |         | a message to display |
+| motd_issue    |         | an issue to display  |
+
+## Example Playbook
+
+    - hosts: 'webservers'
+      roles:
+        - role: 'ansible-role-motd'
     
+## Todo
+
+None.
+
 ## Dependencies
 
 None.
 
-## Example Playbook
+## Supported platforms
 
-    - hosts: webservers
-      roles:
-        - role: t18s.fr_motd
-    
-## Todo
-
-Allow to write a custom message.
+See [meta/main.yml](https://github.com/tristan-weil/ansible-role-motd/blob/master/meta/main.yml)
 
 ## License
 
-```
-Copyright (c) 2018, 2019 Tristan Weil <titou@lab.t18s.fr>
-
-Permission to use, copy, modify, and distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-```
+See [LICENSE.md](https://github.com/tristan-weil/ansible-role-motd/blob/master/LICENSE.md)

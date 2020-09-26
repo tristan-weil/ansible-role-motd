@@ -1,15 +1,15 @@
 ---
 
-- name: update the motd/issue files
+- name: 'update the motd/issue files'
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-    owner: root
-    group: root
-    mode: "0644"
+    owner: 'root'
+    group: "{{ _motd_root_group }}"
+    mode: '0644'
   loop:
-    - src: motd.j2
-      dest: /etc/motd
+    - src: 'motd.j2'
+      dest: '/etc/motd'
 
-    - src: motd.j2
-      dest: /etc/issue
+    - src: 'motd.j2'
+      dest: '/etc/issue'
