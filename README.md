@@ -40,4 +40,4 @@ See [meta/main.yml](https://github.com/tristan-weil/ansible-role-motd/blob/maste
 
 ## License
 
-See [LICENSE.md](https://github.com/tristan-weil/ansible-role-motd/blob/master/LICENSE.md)
+See [LICENSE.md](LICENSE.md)
